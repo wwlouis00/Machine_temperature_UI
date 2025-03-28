@@ -1,18 +1,20 @@
-# 程式概況
+# pyinstaller打包檔案方式
+## 開啟需打包的檔案的檔案位置
+## 在anaconda或cmd輸入指令(需先安裝pyinstaller)
+安裝pyinstaller指令
+```py
+pip install pyinstaller
+```
+打包檔案
+```py
+pyinstaller "檔案名稱"
+```
+![在anaconda或cmd輸入指令](image/1.png)
+## 當檔案打包完後將檔案還無法使用是因為缺少兩個動態連結檔案
 
-## QrCode
+![libiconv.dll和libzbar-64.dll檔案](image/2.png)
 
-1. 掃描八個Channel的QrCode
-2. 八個Channel的讀出來數字存放在各個陣列中
-3. 將各個陣列放置對應的Exce位置
+將資料夾下的libiconv.dll和libzbar-64.dll放入dist資料夾下
 
-## 溫度計算
-
-1. 先將txt檔案裡面所有溫度讀值存成一個陣列
-2. [0][ "第一筆到最後一筆資料" ] 0~7共有8個Channel
-3. 
-4. 
-
-
-
-
+![libiconv.dll和libzbar-64.dll檔案](image/3.png)
+## (4)重新開起exe檔案便可以成功使用

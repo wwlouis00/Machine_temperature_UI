@@ -1,12 +1,12 @@
 import sys
-from PyQt5.QtWidgets import QApplication,QMainWindow
+from PyQt6.QtWidgets import QApplication,QMainWindow
 import os
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt6 import QtCore, QtGui, QtWidgets
 import numpy as np
 from scipy.interpolate import make_interp_spline
-from PyQt5.QtWidgets import QDialog,QApplication,QFileDialog,QMessageBox
-from PyQt5.QtCore import *
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt6.QtWidgets import QDialog,QApplication,QFileDialog,QMessageBox
+from PyQt6.QtCore import *
+from PyQt6 import QtCore, QtGui, QtWidgets
 import pandas as pd
 import matplotlib.pyplot as plt
 import time
@@ -14,14 +14,15 @@ import datetime
 from datetime import datetime, timedelta
 from pyzbar import pyzbar
 import cv2
-from PyQt5.QtGui import QImage, QPixmap
-from PyQt5.QtWidgets import QMainWindow, QApplication, QGraphicsScene, QGraphicsPixmapItem
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt6.QtGui import QImage, QPixmap
+from PyQt6.QtWidgets import QMainWindow, QApplication, QGraphicsScene, QGraphicsPixmapItem
+from PyQt6 import QtCore, QtGui, QtWidgets
 import ftplib
 from ctypes import *
 from sqlalchemy import false
 from sqlalchemy import false
 import shutil
+import pandas as pd
 #時間格式
 now_output_time = str(datetime.now().strftime('%Y-%m-%d %H-%M-%S'))
 com_now_output = str(datetime.now().strftime('%Y-%m-%d'))
@@ -1121,7 +1122,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
         font.setStrikeOut(False)
         font.setKerning(False)
         self.label_txt_2.setFont(font)
-        self.label_txt_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_txt_2.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_txt_2.setObjectName("label_txt_2")
         self.gridLayout_2.addWidget(self.label_txt_2, 1, 0, 1, 1)
         self.label_name = QtWidgets.QLabel(self.Input_box)
@@ -1134,7 +1135,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
         font.setStrikeOut(False)
         font.setKerning(False)
         self.label_name.setFont(font)
-        self.label_name.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_name.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_name.setObjectName("label_name")
         self.gridLayout_2.addWidget(self.label_name, 0, 0, 1, 1)
         self.btn_opentxt = QtWidgets.QPushButton(self.Input_box)
@@ -1172,7 +1173,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
         self.Chart_box.setObjectName("Chart_box")
         self.splitter_2 = QtWidgets.QSplitter(self.Chart_box)
         self.splitter_2.setGeometry(QtCore.QRect(16, 156, 0, 0))
-        self.splitter_2.setOrientation(QtCore.Qt.Vertical)
+        self.splitter_2.setOrientation(QtCore.Qt.Orientation.Vertical)
         self.splitter_2.setObjectName("splitter_2")
         self.widget_6 = QtWidgets.QWidget(self.splitter_2)
         self.widget_6.setStyleSheet("background-color: rgb(255, 255, 255);")
@@ -1300,7 +1301,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.gridLayout.setObjectName("gridLayout")
         self.ch3_T_On = QtWidgets.QLineEdit(self.layoutWidget)
-        self.ch3_T_On.setAlignment(QtCore.Qt.AlignCenter)
+        self.ch3_T_On.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.ch3_T_On.setObjectName("ch3_T_On")
         self.gridLayout.addWidget(self.ch3_T_On, 3, 3, 1, 1)
         self.ch5_qrcode = QtWidgets.QPushButton(self.layoutWidget)
@@ -1312,23 +1313,23 @@ class Ui_MainWindow(QtWidgets.QWidget):
         self.ch5_qrcode.setObjectName("ch5_qrcode")
         self.gridLayout.addWidget(self.ch5_qrcode, 5, 1, 1, 1)
         self.ch3_PF = QtWidgets.QLineEdit(self.layoutWidget)
-        self.ch3_PF.setAlignment(QtCore.Qt.AlignCenter)
+        self.ch3_PF.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.ch3_PF.setObjectName("ch3_PF")
         self.gridLayout.addWidget(self.ch3_PF, 3, 6, 1, 1)
         self.ch5_PF = QtWidgets.QLineEdit(self.layoutWidget)
-        self.ch5_PF.setAlignment(QtCore.Qt.AlignCenter)
+        self.ch5_PF.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.ch5_PF.setObjectName("ch5_PF")
         self.gridLayout.addWidget(self.ch5_PF, 5, 6, 1, 1)
         self.ch8_qrcodelable = QtWidgets.QLineEdit(self.layoutWidget)
-        self.ch8_qrcodelable.setAlignment(QtCore.Qt.AlignCenter)
+        self.ch8_qrcodelable.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.ch8_qrcodelable.setObjectName("ch8_qrcodelable")
         self.gridLayout.addWidget(self.ch8_qrcodelable, 8, 2, 1, 1)
         self.ch8_slope = QtWidgets.QLineEdit(self.layoutWidget)
-        self.ch8_slope.setAlignment(QtCore.Qt.AlignCenter)
+        self.ch8_slope.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.ch8_slope.setObjectName("ch8_slope")
         self.gridLayout.addWidget(self.ch8_slope, 8, 5, 1, 1)
         self.ch7_T_Off = QtWidgets.QLineEdit(self.layoutWidget)
-        self.ch7_T_Off.setAlignment(QtCore.Qt.AlignCenter)
+        self.ch7_T_Off.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.ch7_T_Off.setObjectName("ch7_T_Off")
         self.gridLayout.addWidget(self.ch7_T_Off, 7, 4, 1, 1)
         self.label_ch3 = QtWidgets.QLabel(self.layoutWidget)
@@ -1337,7 +1338,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
         font.setBold(False)
         font.setWeight(50)
         self.label_ch3.setFont(font)
-        self.label_ch3.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_ch3.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_ch3.setObjectName("label_ch3")
         self.gridLayout.addWidget(self.label_ch3, 3, 0, 1, 1)
         self.ch5_slope = QtWidgets.QLineEdit(self.layoutWidget)
